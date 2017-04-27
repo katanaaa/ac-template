@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="windows-1251" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/main.css" type="text/css" />
+    <link rel="stylesheet" href="style/bootstrap.min.css" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <title>My website title</title>
+  </head>
+  <body>
+    <div class="everything">
+      <header>
+        <div class="container">
+
+          <div class="logo">
+            <a title="Welcome" href="/" id="logo"></a>
+          </div>
+
+          <div class="h-menu">
+            <ul class="top-menu">
+              <li class="active"><a href="#">Главная</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Жанр <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Comedy</a></li>
+                  <li><a href="#">Music</a></li>
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Comedy</a></li>
+                  <li><a href="#">Music</a></li>
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Comedy</a></li>
+                  <li><a href="#">Music</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Some shit</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Аниме</a></li>
+              <li><a href="#">Хентай</a></li>
+              <li><a href="#">Дорама</a></li>
+              <li><a href="#">Дорама</a></li>
+              <li><a href="#">Дорама</a></li>
+            </ul>
+          </div>
+
+          <div class="h-profile">
+            <a href="#" class="btn btn-primary" title="Login" data-toggle="modal" data-target="#pop-login">Вход</a>
+            <a href="#" class="btn btn-success" title="Register" data-toggle="modal" data-target="#pop-register">Регисрация</a>
+          </div>
+
+          <div class="h-search">
+            <input maxlength="100" autocomplete="off" name="keyword" type="text" class="form-control search-input" placeholder="Searching..." />
+            <a onclick="searchMovie()" class="search-submit" href="javascript:void(0)" title="Search"><i class="glyphicon glyphicon-search"></i></a>
+          </div>
+
+        </div>
+      </header>
+
+      <div id="main" class="container content">
+
+        <!-- Slider -->
+        <div class="top-content">
+
+          <div id="slider" class="carousel slide" data-ride="carousel">
+            <!-- slider pagination-->
+            <ol class="carousel-indicators">
+              <li data-target="#slider" data-slide-to="0" class="active"></li>
+              <li data-target="#slider" data-slide-to="1"></li>
+              <li data-target="#slider" data-slide-to="2"></li>
+              <li data-target="#slider" data-slide-to="3"></li>
+            </ol>
+
+            <!-- Wrapper for slides -->
+            <div class="carousel-inner" role="listbox">
+
+              <div class="item active">
+                <img src="images/slider.jpg" alt="Chania">
+              </div>
+
+              <div class="item">
+                <img src="images/slider2.jpg" alt="Chania">
+              </div>
+
+              <div class="item">
+                <img src="images/slider3.jpg" alt="Flower">
+              </div>
+
+              <div class="item">
+                <img src="images/slider2.jpg" alt="Flower">
+              </div>
+
+            </div>
+
+            <!-- left right controls-->
+            <a class="left carousel-control" href="#slider" role="button" data-slide="prev"><i class="glyphicon glyphicon-chevron-left"></i></a>
+            <a class="right carousel-control" href="#slider" role="button" data-slide="next"><i class="glyphicon glyphicon-chevron-right"></i></a>
+
+          </div>
+
+        </div>
+
+        <!-- /Slider -->
+
+        <div class="m-title">
+          <span>
+            Новинки
+            <i class="glyphicon glyphicon-chevron-right"></i>
+          </span>
+        </div>
+
+        <div class="item-list ">
+
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-quality">hd</span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+          <div class="m-item">
+            <a href="#" class="m-mask">
+              <span class="mli-eps">Eps <i>5</i></span>
+              <img src="images/article.jpg" class= "mli-thumb" alt="" title=""/>
+              <span class="mli-info"><h2>Bosch - Season 3</h2></span>
+            </a>
+          </div>
+
+        </div>
+
+        <div class="clearfix"></div>
+
+        <div class="pagination">
+          <ul>
+            <li class="prev"><a href="#"><i class="glyphicon glyphicon-chevron-left"></i> Prev</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li class="active"><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li class="next"><a href="#">Next <i class="glyphicon glyphicon-chevron-right"></i></a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <footer>
+        <div class="container">
+          <div class="col-lg-4">
+
+            <div class="f-list">
+
+              <h4>Popular categories</h4>
+              <ul class="footer-menu">
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">Comedy</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Mosh-Craciun</a></li>
+              </ul>
+
+            </div>
+
+            <div class="f-list">
+
+              <h4>Top categories</h4>
+              <ul class="footer-menu">
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">Made in china</a></li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+
+            <h4>Keep in touch</h4>
+            <p>Subscribe to my website mailing list to receive updates on what's going on</p>
+
+            <div class="subscribe-input pull-left">
+              <input type="email" placeholder="Enter your email" name="email-footer" class="form-control search-input" />
+            </div>
+            <div class="subscribe-submit pull-right">
+              <a href="#" class="btn btn-success btn-block">Subscribe</a>
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+            <h4>Copyright © website.ru. All Rights Reserved</h4>
+            <img src="images/logotype.png" alt="" class="logo-footer" />
+            <p>Copyright © website.ru. All Rights Reserved</p>
+            <p class="disclaimer">Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.</p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </footer>
+
+    </div>
+
+<div id="pop-login" class="modal" role="dialog">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+
+      <div class="modal-body">
+        <form class="ligin-form" action="index.html" method="post">
+          <div class="block">
+            <input type="text" name="username" placeholder="E-Mail or Username" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+          </div>
+          <div class="block media small">
+            <label><input type="checkbox" name="" value=""> Remember me</label>
+            <div class="pull-right"><a href="#">Forgot password?</a></div>
+          </div>
+          <button type="submit" name="button" class="btn btn-block btn-primary media">Login</button>
+        </form>
+      </div>
+
+      <div class="modal-footer text-center">
+        Don't have an account? <a href="#" id="log-reg">Join us!</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div id="pop-register" class="modal" role="dialog">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">You are welcome</h4>
+      </div>
+
+      <div class="modal-body">
+        <form class="ligin-form" action="index.html" method="post">
+          <p>By becoming a member you can use the full rance of functions and enjoy watching the anime online.</p>
+          <div class="block">
+            <input type="text" name="username" placeholder="Username" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="text" name="username" placeholder="e-mail" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="password" name="password" placeholder="Confirm Password" class="form-control">
+          </div>
+          <button type="submit" name="button" class="btn btn-block btn-primary media">Register</button>
+        </form>
+      </div>
+
+      <div class="modal-footer text-center">
+        <a href="#" id="reg-log"><i class="glyphicon glyphicon-chevron-left"></i>Back to login</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+  </body>
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="windows-1251" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="style/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="style/main.css" type="text/css" />
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/javascript.js"></script>
+    <title>My website title</title>
+  </head>
+  <body>
+    <div class="everything">
+      <header>
+        <div class="container">
+
+          <div class="logo">
+            <a title="Welcome" href="/" id="logo"></a>
+          </div>
+
+          <div class="h-menu">
+            <ul class="top-menu">
+              <li class="active"><a href="#">Главная</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Жанр <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Adventure</a></li>
+                  <li><a href="#">Comedy</a></li>
+                  <li><a href="#">Music</a></li>
+                  <li role="separator" class="divider"></li>
+                  <li><a href="#">Some shit</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Аниме</a></li>
+              <li><a href="#">Хентай</a></li>
+              <li><a href="#">Дорама</a></li>
+              <li><a href="#">Дорама</a></li>
+              <li><a href="#">Дорама</a></li>
+            </ul>
+          </div>
+
+          <div class="h-profile">
+            <a href="#" class="btn btn-primary" title="Login" data-toggle="modal" data-target="#pop-login">Вход</a>
+            <a href="#" class="btn btn-success" title="Register" data-toggle="modal" data-target="#pop-register">Регисрация</a>
+          </div>
+
+          <div class="h-search">
+            <input maxlength="100" autocomplete="off" name="keyword" type="text" class="form-control search-input" placeholder="Searching..." />
+            <a onclick="searchMovie()" class="search-submit" href="javascript:void(0)" title="Search"><i class="glyphicon glyphicon-search"></i></a>
+          </div>
+
+        </div>
+      </header>
+
+      <div id="main" class="container content">
+
+        <div class="sitebar">
+          <ol class="breadcrumb">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">News</a></li>
+            <li class="active"><a href="#">Robert Pattinson is Up for Another Twilight Movie</a></li>
+          </ol>
+        </div>
+
+        <div class="news-block">
+          <div class="news-content">
+
+            <div class="n-thumb" style="background-image: url('images/news_thumb.jpg');"></div>
+
+            <h1>Robert Pattinson is Up for Another Twilight Movie</h1>
+
+            <p>Robert Pattinson is interested in appearing in a possible Twilight movie spin-off.
+
+
+
+The Twilight star has revealed that he would actually consider returning to the franchise if Summit Entertainment planned on expanding it. Chatting to Yahoo Movies, the actor confessed he's tempted by anything that would 'subvert' audience expectations, which we reckon a return to Twilight would definitely do. When asked if he would be up for a return to the Cullen role as the studio looks to make more Twilight movies.
+
+"Really, they’re expanding it? So I’ll get my own spin-off?" Rob enthused.
+
+"I mean, I'm always kind of curious," he revealed. "Anything where there's a mass audience — or seemingly an audience for it — I always like the idea of subverting people's expectations.
+
+"So there could be some radical way of doing it, which could be quite</p>
+
+          </div>
+          <div class="news-sidebar">
+            <div class="box">
+              <div class="box-head">
+                title
+              </div>
+              <div class="box-content">
+                As putea face lista la related news
+                or top news
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <footer>
+        <div class="container">
+          <div class="col-lg-4">
+
+            <div class="f-list">
+
+              <h4>Popular categories</h4>
+              <ul class="footer-menu">
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">Comedy</a></li>
+                <li><a href="#">Music</a></li>
+                <li><a href="#">Mosh-Craciun</a></li>
+              </ul>
+
+            </div>
+
+            <div class="f-list">
+
+              <h4>Top categories</h4>
+              <ul class="footer-menu">
+                <li><a href="#">Adventure</a></li>
+                <li><a href="#">Crime</a></li>
+                <li><a href="#">Made in china</a></li>
+              </ul>
+
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+
+            <h4>Keep in touch</h4>
+            <p>Subscribe to my website mailing list to receive updates on what's going on</p>
+
+            <div class="subscribe-input pull-left">
+              <input type="email" placeholder="Enter your email" name="email-footer" class="form-control search-input" />
+            </div>
+            <div class="subscribe-submit pull-right">
+              <a href="#" class="btn btn-success btn-block">Subscribe</a>
+            </div>
+
+          </div>
+          <div class="col-lg-4">
+            <h4>Copyright © website.ru. All Rights Reserved</h4>
+            <img src="images/logotype.png" alt="" class="logo-footer" />
+            <p>Copyright © website.ru. All Rights Reserved</p>
+            <p class="disclaimer">Disclaimer: This site does not store any files on its server. All contents are provided by non-affiliated third parties.</p>
+          </div>
+          <div class="clearfix"></div>
+        </div>
+      </footer>
+
+    </div>
+
+<div id="pop-login" class="modal" role="dialog">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">Login</h4>
+      </div>
+
+      <div class="modal-body">
+        <form class="ligin-form" action="index.html" method="post">
+          <div class="block">
+            <input type="text" name="username" placeholder="E-Mail or Username" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+          </div>
+          <div class="block media small">
+            <label><input type="checkbox" name="" value=""> Remember me</label>
+            <div class="pull-right"><a href="#">Forgot password?</a></div>
+          </div>
+          <button type="submit" name="button" class="btn btn-block btn-primary media">Login</button>
+        </form>
+      </div>
+
+      <div class="modal-footer text-center">
+        Don't have an account? <a href="#" id="log-reg">Join us!</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+<div id="pop-register" class="modal" role="dialog">
+
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title">You are welcome</h4>
+      </div>
+
+      <div class="modal-body">
+        <form class="ligin-form" action="index.html" method="post">
+          <p>By becoming a member you can use the full rance of functions and enjoy watching the anime online.</p>
+          <div class="block">
+            <input type="text" name="username" placeholder="Username" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="text" name="username" placeholder="e-mail" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="password" name="password" placeholder="Password" class="form-control">
+          </div>
+          <div class="block media">
+            <input type="password" name="password" placeholder="Confirm Password" class="form-control">
+          </div>
+          <button type="submit" name="button" class="btn btn-block btn-primary media">Register</button>
+        </form>
+      </div>
+
+      <div class="modal-footer text-center">
+        <a href="#" id="reg-log"><i class="glyphicon glyphicon-chevron-left"></i>Back to login</a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+  </body>
+</html>
