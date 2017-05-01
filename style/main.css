@@ -241,12 +241,12 @@ header > .container{
 #slider > .carousel-control{
   cursor: pointer;
   display: block;
+  font-size: 26px;
   position: absolute;
-  top: 50%;
+  top: 30%;
   width: 50px;
   height: 80px;
   margin: 20px;
-  margin-top: -30px;
   background: rgba(0,0,0,0.3);
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -260,13 +260,22 @@ header > .container{
 /**/
 #slider > .carousel-control > i{
   position: absolute;
-  top:35px;
+  top:28px;
+  left: 7px;
 }
 /**/
+.slider-dam{
+  background: #fff;
+  text-align: left;
+  padding: 15px;
+  box-shadow: 0 3px 3px 0 rgba(0,0,0,0.2);
+  position: relative;
+  top: -32px;
+}
 /* SLIDER */
 
 .content{
-  padding:20px;
+  padding:0;
 }
 
 .m-title {
