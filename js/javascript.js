@@ -50,7 +50,7 @@ $(window).on("scroll", function() {
 				backgroundColor: "#fff"
 		}), $("header").animate({
 				top: "0px"
-		}, 500), $("everything").css("padding-top", $("header").outerHeight())) : ($("header").css({
+		}, 350), $("everything").css("padding-top", $("header").outerHeight())) : ($("header").css({
 				position: "absolute",
 				top: "0px"
 		}), $("everything").css("padding-top", "0px")), c = $(window).scrollTop()

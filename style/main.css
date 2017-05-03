@@ -195,6 +195,8 @@ header > .container{
 #pop-login .modal-dialog, #pop-register .modal-dialog, #pop-forgot .modal-dialog {
     width: 430px;
 }
+.modal-body label:hover, .modal-body:input[type="checkbox"]:hover{cursor: pointer;}
+/*finish later*/
 .h-profile .avatar{
   margin-left: 10px;
   position: relative;
@@ -277,7 +279,6 @@ header > .container{
 .content{
   padding:0;
 }
-
 .m-title {
   display: block;
   margin-bottom: 10px;
@@ -302,19 +303,24 @@ header > .container{
 
 .item-list{
   display: block;
-  margin: 0 -1%;
+  margin: 0;
   padding: 5px;
+  overflow: hidden;
 }
 
 .item-list .m-item {
-  width: 10.5%;
+  /*width: 173px;
+  height: 260px;
+  margin: 10px;/**/
+  /*width: 14.6%;*/
+  width: 170px;
   margin: 1%;
-  border-radius: 5px;
+  height: 280px;/**/
   float: left;
   position: relative;
-  height: 200px;
   overflow: hidden;
-  background: #000;
+  background: #000; /* Preloader or something */
+  border-radius: 5px;
 }
 .item-list .m-item .m-mask {
   display: inline-block;
@@ -328,7 +334,7 @@ header > .container{
 }/**/
 .item-list .m-item .m-mask:before{
   content: "";
-  background: rgba(0,0,0,0.7);
+  background: rgba(0,0,0,0.65);
   border-radius: 5px;
   position: absolute;
   top: 0;
@@ -376,10 +382,10 @@ header > .container{
   text-align: center;
   height: 40px;
   border-radius: 50%;
-  background: rgba(3,151,214,0.9);
+  background: rgba(3,151,214,0.8);
   color: #fff;
   font-size: 10px;
-  text-transform: uppercase;
+  text-transform: ;
   line-height: 1em;
   text-shadow: 0 0 2px rgba(0,0,0,0.3);
 }
@@ -396,6 +402,22 @@ header > .container{
   color: #222;
   font-size: 12px;
   text-transform: uppercase;
+  height: auto;
+  line-height: 12px;
+  padding: 4px 6px;
+  position: absolute;
+  right: 8px;
+  top: 8px;
+  width: auto;
+  z-index: 4;
+}
+.item-list .m-item .m-mask .mli-episode {
+  background: #3b8ad9;
+  border-radius: 3px;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 200;
+  text-transform: capitalize;
   height: auto;
   line-height: 12px;
   padding: 4px 6px;
@@ -460,8 +482,136 @@ header > .container{
   color:#fff;
 }
 .sitebar .breadcrumb{background: none; padding: 0;color:#333;font-weight: 300;}
-
 /*.sitebar*/
+
+/*.full story*/
+
+.fs-content{
+  padding:20px;
+  background: #fff;
+}
+.fs-thumb {float: left;margin-right: 20px}
+.fs-thumb img{width: 140px;height: 210px}
+.fs-thumb span{
+display: block;
+  position: relative;
+  top: -205px;
+  left: 110px;
+  font-size: 11px;
+  font-weight: 400;
+  color: #fff;
+  background-color: #c9302c;
+  border-color: #ac2925;
+  border: 1px;
+  box-shadow: ;
+  padding: 5px;
+  width: 25px !important;
+  border-radius: 20px;
+
+}
+
+.fs-desc{
+  width: 700px;
+  margin-right: 20px;
+  min-height: 210px;
+  float: left;
+  padding-right: 20px;
+  border-right: 1px solid #eee;
+}
+.fs-desc h1{
+  font-size: 20px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 10px;
+  display: block;
+  margin-right: 10px;
+}
+.fs-desc h2{
+  font-size: 17px;
+  line-height: 28px;
+  margin: 0;
+  margin-bottom: 10px;
+  display: block;
+  margin-right: 10px;
+}
+.fs-desc > .btn{
+  vertical-align: middle;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.fs-sidebar{
+  float:right;
+  width: 250px;
+  height: 100%; /*take off after*/
+}
+.fs-sidebar > .btn-title a{
+  border-radius: 15px;
+  padding: 3px 6px;
+  font-size: 12px;
+  margin:5px; /* Skimba mai tirziu */
+}
+.fs-sidebar .rating{
+  margin: 0px 0;
+  width: 100%;
+  height: 60px;
+}
+.fs-sidebar > .rating > .span{
+  margin: 10px;
+  padding: 10px;
+  /*float: left;/**/
+  background: #c9302c;
+  color: #fff;
+  font-size: 20px;
+}
+
+.fs-desc > .descr{
+  width: 100%;
+  margin: 10px 0px;
+  font-size: 14px;
+  min-height: 50px;
+}
+.fs-desc > .info{
+  display: block;
+  width: 100%;
+}
+/*.fs-desc > .info a:after{
+  content: ", ";
+}*/
+.fs-desc > .info p a:not(:last-child):after {
+  content: ", ";
+}
+.info{
+  width: 100%;
+}
+.info-left{
+  display: inline-block;
+  float:left;
+  width: 48%;
+  margin: 1%;
+}
+.info-right{
+  display: inline-block;
+  float:right;
+  width: 48%;
+  margin: 1%;
+}
+.fs-keywords {
+  margin-bottom: 20px;
+  padding: 20px;
+  display: block;
+  clear: both;
+  background: #f5f5f5;
+  }
+  .fs-keywords a{
+    color: #888;
+  }
+  .fs-keywords a:hover{
+    color: #0397D6;
+  }
+  .fs-keywords a:before{
+    content: "#";
+  }
+/*.news-block*/
 .news-block .news-content{
   width:800px;
   float: left;
@@ -510,6 +660,7 @@ header > .container{
 .news-block .box > .box-content{
   padding: 10px;
 }
+/* /news-block*/
 
 footer{
   background: #2C3549;
