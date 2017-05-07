@@ -94,14 +94,10 @@ header > .container{
   width: 1px;
 }
 
-.h-menu{
-  float: left;
-}
+.hm-menu, .hm-search {display: none;color: #333}
 
-.h-menu ul.topmenu{
-  list-style: none;
-  padding: 0;
-}
+.h-menu{float: left}
+.h-menu ul.topmenu{list-style: none;padding: 0}
 .h-menu ul.top-menu li{
   display: inline-block;
   float: left;
@@ -481,7 +477,7 @@ header > .container{
   border: none;
   color:#fff;
 }
-.sitebar .breadcrumb{background: none; padding: 0;color:#333;font-weight: 300;}
+.sitebar .breadcrumb{background: none; padding: 0;color:#333;font-weight: 300;margin-top:20px;}
 /*.sitebar*/
 
 /*.full story*/
@@ -580,6 +576,10 @@ display: block;
 .fs-desc > .info p a:not(:last-child):after {
   content: ", ";
 }
+.info-right p a:after {
+  content: " ";
+}
+
 .info{
   width: 100%;
 }
@@ -709,4 +709,54 @@ footer .disclaimer{
 .logo-footer {
   width: 240px;
   margin-bottom: 20px;
+}
+
+/* Globals (for all screens )*/
+.hm-menu.active, .hm-search.active{ background: #0397D6;}
+.hm-menu.active i, .hm-search.active i{ color: #fff;}
+
+@media screen and (max-width:1200px) {
+  .h-search{display: none}
+  .hm-search {
+    display: inline-block;
+    cursor: pointer;
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    background: #eee;
+    border-radius: 3px;
+    position: relative;
+    top: 15px;
+    left: 180px;
+  }
+  .hm-search i{ font-size: 18px; line-height: 32px;}
+}
+@media screen and (max-width:991px) {
+  header .logo{
+    margin: 0;
+    position: absolute;
+    top: 10px; /* It depends by what image i got I guess*/
+    left: 50%;
+    margin-left: -77px;
+  }
+  header .logo:after{background: none}
+  .h-menu, .h-search{display: none}
+  .hm-menu, .hm-search {
+    display: inline-block;
+    cursor: pointer;
+    height: 34px;
+    width: 34px;
+    text-align: center;
+    background: #eee;
+    border-radius: 3px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+  }.hm-menu i, .hm-search i{ font-size: 18px; line-height: 32px;}
+  .hm-search{left: 60px}
+  .h-profile{
+    display: inline-block;
+    position: absolute;
+    right: 15px;
+  }
 }

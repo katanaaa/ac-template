@@ -14,32 +14,30 @@ function initJQuery(cb) {
 		setTimeout("initJQuery(" + cb + ")", 50);
 	} else {
     $("document").ready(function($){
+
+			/* playground */
       $("#log-reg").click(function(){
           $('#pop-login').modal('hide');
           $('#pop-register').modal('show');
         });
-        $("#reg-log").click(function(){
+      $("#reg-log").click(function(){
           $('#pop-register').modal('hide');
           $('#pop-login').modal('show');
-        });
-    });
+      	});
+			$(".hm-search").click(function(){
+			  $(".h-search,.hm-search").toggleClass("active"), $(".h-menu, .hm-menu").removeClass("active")
+			});
+			$(".hm-menu").click(function(){
+			  $(".h-menu,.hm-menu").toggleClass("active"), $(".h-search, .hm-search").removeClass("active")
+			});
+			$('[data-toggle="popover"]').popover();//pahodu nu ni treb //check later
+
+
+		});
   }
 }
 
 window.onload = initJQuery(function() {});
-
-$(document).ready(function(){
-    $('[data-toggle="popover"]').popover();
-});
-
-$(function(){
-  $('[rel=popover]').popover({
-    html : true,
-    content: function() {
-      return $('#popover_content_wrapper').html();
-    }
-  });
-});
 
 /* Fixed header appears when scroll up, disapear when scrol down /**/
 var c = 0;
