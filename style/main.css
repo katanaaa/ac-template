@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400&subset=cyrillic,cyrillic-ext');
 
 body{
-  padding: 0px;
-  margin: 0px;
+  padding: 0;
+  margin: 0;
   background: #e8ebf5;/**/
   /*background: #222;/* experementing with dark colors*/
   font-size: 14px;
@@ -19,7 +19,7 @@ a {
   -moz-outline: none;
   font-family: 'Roboto Condensed', sans-serif;
 }
-a:visited{text-decoration: none;}
+a:visited{text-decoration: none}
 a:hover, a:active{color: #069aD9}
 
 ol, ul {
@@ -36,13 +36,13 @@ button, input, optgroup, select, textarea{
   letter-spacing: normal;
   word-spacing: normal;
   text-transform: none;
-  text-indent: 0px;
+  text-indent: 0;
   text-shadow: none;
   display: inline-block;
   text-align: start;
 }
 .text-center {text-align: center}
-.btn{font-weight: 300;} /* correct bootstrap abit /**/
+.btn{font-weight: 300} /* correct bootstrap abit /**/
 
 /* ## END_Config ##*/
 .everything{
@@ -134,7 +134,7 @@ header > .container{
   display: block;
   clear: both;
   font-weight: normal;
-  padding-top: 0px; /* otherways bootsrap fucks it up and pushes it little bit down so it's not in the middle*/
+  padding-top: 0; /* otherways bootsrap fucks it up and pushes it little bit down so it's not in the middle*/
   line-height: 1.42857143;
   white-space: nowrap;
   height: 30px;
@@ -160,15 +160,18 @@ header > .container{
   box-shadow: none;
 }
 .h-search .search-submit {
-  cursor: pointer;
   font-size: 16px;
-  top: -27px;
-  left: 194px;
   height: 34px;
   width: 34px;
-  position: relative;
   display: inline-block;
+  float: right;
+  position: relative;
+  top: -34px;
   text-align: center;
+  cursor: pointer;
+}
+.h-search .search-submit i{
+  line-height: 30px;
 }
 .form-control{
   display: block;
@@ -191,7 +194,7 @@ header > .container{
 #pop-login .modal-dialog, #pop-register .modal-dialog, #pop-forgot .modal-dialog {
     width: 430px;
 }
-.modal-body label:hover, .modal-body:input[type="checkbox"]:hover{cursor: pointer;}
+.modal-body label:hover, .modal-body:input[type="checkbox"]:hover{cursor: pointer}
 /*finish later*/
 .h-profile .avatar{
   margin-left: 10px;
@@ -284,7 +287,7 @@ header > .container{
   font-size: 16px;
   text-transform: uppercase;
   font-weight: 500;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   display: inline-block;
   padding: 0 20px;
   height: 40px;
@@ -477,7 +480,7 @@ header > .container{
   border: none;
   color:#fff;
 }
-.sitebar .breadcrumb{background: none; padding: 0;color:#333;font-weight: 300;margin-top:20px;}
+.sitebar .breadcrumb{background: none; padding: 0;color:#333;font-weight: 300;margin-top:20px}
 /*.sitebar*/
 
 /*.full story*/
@@ -547,7 +550,7 @@ display: block;
   margin:5px; /* Skimba mai tirziu */
 }
 .fs-sidebar .rating{
-  margin: 0px 0;
+  margin: 0 0;
   width: 100%;
   height: 60px;
 }
@@ -562,7 +565,7 @@ display: block;
 
 .fs-desc > .descr{
   width: 100%;
-  margin: 10px 0px;
+  margin: 10px 0;
   font-size: 14px;
   min-height: 50px;
 }
@@ -640,7 +643,7 @@ display: block;
   width: 300px;
   float: right;
   min-height: 300px;
-  outline: 0px solid red; /*get rid of this shit man*/
+  outline: 0 solid red; /*get rid of this shit man*/
 }
 .news-block .box{
   background: #fff;
@@ -712,10 +715,11 @@ footer .disclaimer{
 }
 
 /* Globals (for all screens )*/
-.hm-menu.active, .hm-search.active{ background: #0397D6;}
-.hm-menu.active i, .hm-search.active i{ color: #fff;}
+.hm-menu.active, .hm-search.active{ background: #0397D6}
+.hm-menu.active i, .hm-search.active i{ color: #fff}
 
 @media screen and (max-width:1200px) {
+  .container{width:100%}
   .h-search{display: none}
   .hm-search {
     display: inline-block;
@@ -729,7 +733,20 @@ footer .disclaimer{
     top: 15px;
     left: 180px;
   }
-  .hm-search i{ font-size: 18px; line-height: 32px;}
+  .h-search.active{display: inline-block}
+  .h-search{
+    float: none;
+    margin-top: 0;
+    position: absolute;
+    top:55px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 65px;
+    padding: 15px;
+    background: #fff;
+  }
+  .hm-search i{ font-size: 18px; line-height: 32px}
 }
 @media screen and (max-width:991px) {
   header .logo{
@@ -752,11 +769,45 @@ footer .disclaimer{
     position: absolute;
     top: 15px;
     left: 15px;
-  }.hm-menu i, .hm-search i{ font-size: 18px; line-height: 32px;}
+  }.hm-menu i, .hm-search i{ font-size: 18px; line-height: 32px}
   .hm-search{left: 60px}
   .h-profile{
     display: inline-block;
     position: absolute;
     right: 15px;
   }
+  .h-menu.active{display: block}
+  .h-search.active{display: inline-block}
+  .h-search{
+    float: none;
+    margin-top: 0;
+    position: absolute;
+    top:55px;
+    left: 0;
+    right: 0;
+    width: auto;
+    height: 65px;
+    padding: 15px;
+    background: #fff;
+  }
+  .h-menu{
+    position: absolute;
+    border-top: none;
+    bottom: auto;
+    top: 70px;
+    right: 15px;
+    left: 15px;
+    background: #333;
+    display: none;
+  }
+  .h-menu ul.top-menu{width: 100%;padding: 0}
+  .h-menu ul.top-menu li{
+    float: none;
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid #444;
+    padding: 0 30px;
+  }
+  .h-menu ul.top-menu li.active a{ box-shadow: none}
+  .h-menu ul.top-menu li a{color: #fff; display: block}
 }
